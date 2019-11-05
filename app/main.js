@@ -10,9 +10,10 @@ $(document).ready(function () {
     $('#getCityWeather').click(function () {
         var cityName = $('#cityName').val();
         let apiCode = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric&appid=7f1737ddada15736a58660a58f9be0a6';
+
+
         //pobieranie JSON
         $.getJSON(apiCode, function (data) {
-
             var nameCity = data.name;
             var nameCountry = data.sys.country;
             var temp = data.main.temp;
@@ -26,12 +27,11 @@ $(document).ready(function () {
             var weatherDescription = data.weather[0].description;
 
             //covert sunrise
-            function convertTimeSunrise(x) {
-                var newSunrise = new Date(x * 1000)
+            function convertTimeSunrise(sunTime) {
+                var newSunrise = new Date(sunTime * 1000)
                 var hourSunrise = newSunrise.getHours()
                 let minSunrise = newSunrise.getMinutes()
                 let timeSunrise = ` ${hourSunrise}:${minSunrise}`;
-
                 return timeSunrise;
             };
             //covert sunrise
@@ -39,22 +39,22 @@ $(document).ready(function () {
                 var newSunset = new Date(x * 1000)
                 var hourSunset = newSunset.getHours()
                 let minSunset = newSunset.getMinutes()
-                let timeSunset = ` ${hourSunset}:${minSunset}`;
-                if (hourSunset < 10) hourSunset = `0 ${hourSunset}`
+                let timeSunset = `${hourSunset}:${minSunset}`;
                 return timeSunset;
             };
 
-
-            $('.name__city--weather').html(` <p> City: ${nameCity } </p>`);
-            $('.name__country--weather').html(`<p> Country: ${nameCountry}</p>`);
-            $('.temp').html(`<p> Temperature: ${temp}&#x2103 </p>`);
-            $('.temp--min').html(`<p> Temp-min: ${minTemp}&#x2103 </p>`);
-            $('.temp--max').html(`<p> Temp-max: ${maxTemp}&#x2103 </p>`);
-            $('.sunrise').html(`<p> Sunrise: ${sunrise } </p>`);
-            $('.sunset').html(`<p> Sunset: ${sunset} </p>`);
-
-
+            //create nodes
+            $('p.city__name').text(nameCity);
+            $('p.country__name').text(nameCountry);
+            $('p.city__temp').html(`${temp}&#x2103 `);
+            $('p.city__temp--min').html(`${minTemp}&#x2103`);
+            $('p.city__temp--max').html(`${maxTemp}&#x2103 `);
+            $('p.city__sunrise').text(sunrise);
+            $('p.city__sunset').text(sunset);
+            $('p.city__pressure').text(`${pressure} hpa`);
+            $('p.city__wind').text(`${wind} m/s`);
+            $('p.city__weather__main').text(weatherMain);
+            $('p.city__weather__description').text(weatherDescription);
         });
-
     });
 });

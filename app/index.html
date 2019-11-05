@@ -8,6 +8,8 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nunito:400,700&display=swap&subset=latin-ext"
         rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <!-- css style -->
     <link rel="stylesheet" href="css/style.css">
     <title>The weather in Your City</title>
@@ -20,85 +22,92 @@
         </header>
 
         <section>
+            <!-- search city -->
             <div class="menu__search">
                 <input id="cityName" type="text" placeholder="Wpisz miasto dla którego chcesz sprawdzić pogodę. "
                     title='Dla lepszej dokładności zalecamy wpisywanie angielskich nazw miast'>
                 <button id="getCityWeather" class="btn">Znajdź miasto</button>
             </div>
         </section>
+        <!-- info city -->
         <section>
             <div class="container__small">
-                <div class="look name__city--weather">
-
+                <div class=" name__city--weather">
+                    <h2>City</h2>
+                    <p class="city__name"> - </p>
                 </div>
 
-                <div class="look name__country--weather">
-
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container__small">
-                <div class="look temp">
-
-                </div>
-
-                <div class="look temp--min">
-
-                </div>
-                <div class="look temp--max">
-
+                <div class=" name__country--weather">
+                    <h2>Country</h2>
+                    <p class="country__name"> - </p>
                 </div>
             </div>
         </section>
 
+        <!-- Temperature -->
         <section>
             <div class="container__small">
-                <div class="look sunrise">
-
+                <div class="container__look ">
+                    <h2>Temperature</h2>
+                    <p class="city__temp"> - </p>
+                    <i class="fas fa-thermometer-full"></i>
                 </div>
 
-
-                <div class="look sunset">
-
+                <div class="container__look ">
+                    <h2>Temp min.</h2>
+                    <p class="city__temp--min"> - </p>
+                    <i class="fas fa-temperature-low"></i>
+                </div>
+                <div class="container__look ">
+                    <h2>Temp max.</h2>
+                    <p class="city__temp--max"> - </p>
+                    <i class="fas fa-temperature-high"></i>
                 </div>
             </div>
         </section>
-        <!-- <div class="container__small">
-              
+        <!-- Sun info -->
+        <section>
             <div class="container__small">
-                <div class="look sunrise">
-
+                <div class="container__look ">
+                    <h2>Sunrise</h2>
+                    <p class="city__sunrise"> - </p>
+                    <i class="fas fa-sun"></i>
                 </div>
 
-                <div class="look sunset">
+                <div class="container__look ">
+                    <h2>Sunset</h2>
+                    <p class="city__sunset"> - </p>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="container__look  ">
+                    <h2>Wind</h2>
+                    <p class="city__wind"> - </p>
+                    <i class="fas fa-wind"></i>
+                </div>
+            </div>
 
+            <div class="container__small">
+                <div class="container__look ">
+                    <h2>Pressure</h2>
+                    <p class="city__pressure"> - </p>
+                </div>
+                <div class="container__look ">
+                    <h2>Weather</h2>
+                    <p class="city__weather__main"> - </p>
+                </div>
+
+                <div class="container__look ">
+                    <h2>Weather description</h2>
+                    <p class="city__weather__description"> - </p>
                 </div>
 
             </div>
-            <div class="container__small">
-                <div class="look pressure">
 
-                </div>
 
-                <div class="look wind">
+        </section>
 
-                </div>
 
-            </div>
-            <div class="container__small">
-                <div class="look weather__main">
 
-                </div>
-
-                <div class="look weather__description">
-
-                </div>
-                <div class="look weather__icon">
-
-                </div>
-
-            </div> -->
 
 
     </div>

@@ -5,35 +5,41 @@
 }
 
 body {
-    background-color: $basic-color;
+    background-color: rgba(187, 187, 180, 0.603);
     font-family: 'Nunito', sans-serif;
 
-    section {
-        margin-bottom: 1em;
+    p {
+        text-align: center;
+        font-size: 2em;
+    }
 
-        .look {
-            flex-basis: 40%;
-            text-align: center;
-
-            p {
-                font-size: 2em;
-            }
-        }
-
+    i {
+        font-size: 3em;
+        padding: 10px;
     }
 
     .container {
         width: 1120px;
         margin: 0 auto;
-        background-color: rgb(207, 209, 91);
+        background-color: rgba(200, 200, 196, 0.753);
         padding: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.459);
         min-height: 100vh;
 
-        .container__small {
-            display: flex;
-            justify-content: space-around;
+        section {
+            margin-bottom: 2em;
 
+            .container__small {
+                display: flex;
+
+                justify-content: space-around;
+
+                .container__look {
+                    flex-basis: 39%;
+                    text-align: center;
+                    height: 30vh;
+
+                }
+            }
         }
     }
 }
