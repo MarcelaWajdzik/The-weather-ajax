@@ -9,7 +9,7 @@ $(document).ready(function () {
     //nasłuchiwanie na click
     $('#getCityWeather').click(function () {
         var cityName = $('#cityName').val();
-        let apiCode = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric&appid=7f1737ddada15736a58660a58f9be0a6';
+        let apiCode = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric&appid=7f1737ddada15736a58660a58f9be0a6';
 
 
         //pobieranie JSON
