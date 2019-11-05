@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #dbdd64;
+  font-family: 'Nunito', sans-serif; }
+  body section {
+    margin-bottom: 1em; }
+    body section .look {
+      flex-basis: 40%;
+      text-align: center; }
+      body section .look p {
+        font-size: 2em; }
+  body .container {
+    width: 1120px;
+    margin: 0 auto;
+    background-color: #cfd15b;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    min-height: 100vh; }
+    body .container .container__small {
+      display: flex;
+      justify-content: space-around; }
+
+header h1 {
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  font-size: 5rem;
+  padding: 10px; }
+
+section .menu__search {
+  text-align: center;
+  margin-top: 2em; }
+  section .menu__search input#cityName {
+    width: 40%;
+    padding: 5px;
+    transition: 500ms all;
+    text-align: center;
+    cursor: pointer; }
+  section .menu__search button {
+    border: 0;
+    padding: 5px;
+    margin-left: 0.5em;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer; }

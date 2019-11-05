@@ -1,0 +1,25 @@
+section {
+    .menu__search {
+        text-align: center;
+        margin-top: 2em;
+
+        input#cityName {
+            width: 40%;
+            padding: 5px;
+            transition: 500ms all;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        button {
+            border: 0;
+            padding: 5px;
+            margin-left: 0.5em;
+            font-family: 'Nunito', sans-serif;
+            color: #fff;
+            background-color: #000;
+            cursor: pointer;
+        }
+    }
+
+}

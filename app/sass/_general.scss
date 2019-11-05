@@ -4,8 +4,36 @@
     box-sizing: border-box;
 }
 
-.container {
-    width: 1120px;
-    margin: 0 auto;
-    background-color: #BFC14C;
+body {
+    background-color: $basic-color;
+    font-family: 'Nunito', sans-serif;
+
+    section {
+        margin-bottom: 1em;
+
+        .look {
+            flex-basis: 40%;
+            text-align: center;
+
+            p {
+                font-size: 2em;
+            }
+        }
+
+    }
+
+    .container {
+        width: 1120px;
+        margin: 0 auto;
+        background-color: rgb(207, 209, 91);
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.459);
+        min-height: 100vh;
+
+        .container__small {
+            display: flex;
+            justify-content: space-around;
+
+        }
+    }
 }
